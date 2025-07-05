@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KillerBunny Adventure - Web Interface</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="game-title">🐰 KillerBunny Adventure 🐰</h1>
+            <p class="subtitle">Face the most foul, cruel, and bad-tempered rodent you ever set eyes on!</p>
+        </header>
+
+        <main>
+            <div class="game-area">
+                <div class="story-section">
+                    <h2>🎭 The Story</h2>
+                    <p class="story-text">
+                        In the depths of the Cave of Caerbannog lives a creature so terrible that it has 
+                        defeated countless brave knights. The <strong>Killer Bunny of Caerbannog</strong> 
+                        guards the legendary Holy Grail with its life.
+                    </p>
+                    <p class="story-text">
+                        Your mission: Retrieve the Holy Grail and prove your worth as a knight!
+                    </p>
+                </div>
+
+                <div class="game-controls">
+                    <h2>🎮 Game Demo</h2>
+                    <div class="demo-area">
+                        <div class="terminal" id="gameTerminal">
+                            <div class="terminal-header">
+                                <span class="terminal-title">Adventure Terminal</span>
+                                <div class="terminal-buttons">
+                                    <span class="btn-close"></span>
+                                    <span class="btn-minimize"></span>
+                                    <span class="btn-maximize"></span>
+                                </div>
+                            </div>
+                            <div class="terminal-body" id="terminalOutput">
+                                <div class="output-line">Welcome to the KillerBunny Adventure!</div>
+                                <div class="output-line">Type commands to explore the world...</div>
+                                <div class="output-line prompt">📍 Forest Entrance > <span class="cursor">_</span></div>
+                            </div>
+                            <div class="terminal-input">
+                                <input type="text" id="commandInput" placeholder="Enter command..." autocomplete="off">
+                                <button id="submitCommand">Execute</button>
+                            </div>
+                        </div>
+                        
+                        <div class="command-help">
+                            <h3>Available Commands:</h3>
+                            <ul>
+                                <li><code>look</code> - Look around</li>
+                                <li><code>go north/south/east/west</code> - Move</li>
+                                <li><code>attack</code> - Fight the bunny</li>
+                                <li><code>inventory</code> - Check items</li>
+                                <li><code>help</code> - Show all commands</li>
+                                <li><code>reset</code> - Start over</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-section">
+                    <h2>📊 Game Statistics</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h3>🏥 Health</h3>
+                            <div class="stat-value" id="playerHealth">100/100</div>
+                            <div class="health-bar">
+                                <div class="health-fill" id="healthBar" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <h3>⚔️ Attack</h3>
+                            <div class="stat-value" id="playerAttack">20</div>
+                        </div>
+                        <div class="stat-card">
+                            <h3>📍 Location</h3>
+                            <div class="stat-value" id="currentLocation">Forest Entrance</div>
+                        </div>
+                        <div class="stat-card">
+                            <h3>🎒 Items</h3>
+                            <div class="stat-value" id="itemCount">0</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="character-section">
+                    <h2>👥 Characters</h2>
+                    <div class="character-grid">
+                        <div class="character-card player">
+                            <div class="character-image">🗡️</div>
+                            <h3>Brave Knight</h3>
+                            <p>Health: 100 | Attack: 20</p>
+                            <p class="character-desc">A courageous knight on a quest for the Holy Grail</p>
+                        </div>
+                        <div class="character-card enemy">
+                            <div class="character-image">🐰</div>
+                            <h3>Killer Bunny</h3>
+                            <p>Health: 80 | Attack: 30</p>
+                            <p class="character-desc">The most foul, cruel, and bad-tempered rodent</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-demo">
+                    <h2>💻 Technical Demonstration</h2>
+                    <div class="tech-grid">
+                        <div class="tech-card">
+                            <h3>🐍 Python Game Engine</h3>
+                            <p>Object-oriented game design with character classes, world management, and combat system</p>
+                            <div class="code-preview">
+                                <code>class KillerBunny(Character):<br>&nbsp;&nbsp;def attack(self, target):</code>
+                            </div>
+                        </div>
+                        <div class="tech-card">
+                            <h3>🌐 Interactive Web UI</h3>
+                            <p>Responsive design with terminal simulation and real-time game state updates</p>
+                            <div class="code-preview">
+                                <code>&lt;div class="terminal"&gt;<br>&nbsp;&nbsp;&lt;div class="output"&gt;</code>
+                            </div>
+                        </div>
+                        <div class="tech-card">
+                            <h3>🎨 Modern CSS</h3>
+                            <p>Flexbox layouts, CSS Grid, animations, and responsive design principles</p>
+                            <div class="code-preview">
+                                <code>.terminal {<br>&nbsp;&nbsp;display: grid;<br>&nbsp;&nbsp;animation: glow;</code>
+                            </div>
+                        </div>
+                        <div class="tech-card">
+                            <h3>⚡ JavaScript Logic</h3>
+                            <p>Event handling, DOM manipulation, and simulated game state management</p>
+                            <div class="code-preview">
+                                <code>function executeCommand(cmd) {<br>&nbsp;&nbsp;updateGameState();</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="capabilities">
+                <h2>🤖 AI Coding Agent Capabilities Demonstrated</h2>
+                <div class="capabilities-grid">
+                    <div class="capability">
+                        <h3>🔧 Full-Stack Development</h3>
+                        <p>Backend Python game engine + Frontend web interface</p>
+                    </div>
+                    <div class="capability">
+                        <h3>📐 Software Architecture</h3>
+                        <p>Object-oriented design, separation of concerns, modular code</p>
+                    </div>
+                    <div class="capability">
+                        <h3>🎨 UI/UX Design</h3>
+                        <p>Responsive layouts, animations, user-friendly interfaces</p>
+                    </div>
+                    <div class="capability">
+                        <h3>📚 Documentation</h3>
+                        <p>Comprehensive README, code comments, technical specs</p>
+                    </div>
+                    <div class="capability">
+                        <h3>🧪 Testing & Quality</h3>
+                        <p>Unit tests, error handling, code validation</p>
+                    </div>
+                    <div class="capability">
+                        <h3>🌍 Multi-Language</h3>
+                        <p>Python, JavaScript, HTML/CSS, Go, C++ examples</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-text">
+                <p>
+                    <strong>Réponse à "Que pense tu pouvoir faire ?"</strong><br>
+                    Je peux créer des applications complètes, bien architecturées et documentées, 
+                    démontrant des compétences en développement full-stack, conception d'interfaces 
+                    utilisateur, et bonnes pratiques de programmation.
+                </p>
+                <p>
+                    <em>Created with ❤️ by AI Coding Agent</em>
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
